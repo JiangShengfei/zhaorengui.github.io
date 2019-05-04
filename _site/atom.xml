@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-11T08:32:22+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Rengui’s Notes</title><subtitle>Life doesn't just happen to you; you receive everything in your life based on what you've given. 生命中的一切都不是巧合，你得到什么，是源于你付出了什么。</subtitle><author><name>Zhao Rengui</name></author><entry><title type="html">数据结构与算法</title><link href="http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms/" rel="alternate" type="text/html" title="数据结构与算法" /><published>2019-02-13T00:00:00+08:00</published><updated>2019-02-13T00:00:00+08:00</updated><id>http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms</id><content type="html" xml:base="http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms/">&lt;div id=&quot;outline-container-orga7ca754&quot; class=&quot;outline-2&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-04T22:33:33+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">Rengui’s Notes</title><subtitle>Life doesn't just happen to you; you receive everything in your life based on what you've given. 生命中的一切都不是巧合，你得到什么，是源于你付出了什么。</subtitle><author><name>Zhao Rengui</name></author><entry><title type="html">数据结构与算法</title><link href="http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms/" rel="alternate" type="text/html" title="数据结构与算法" /><published>2019-02-13T00:00:00+08:00</published><updated>2019-02-13T00:00:00+08:00</updated><id>http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms</id><content type="html" xml:base="http://localhost:4000/algorithms/2019/02/13/data-structure-algorithms/">&lt;div id=&quot;outline-container-orga7ca754&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;orga7ca754&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; 数据结构和算法目录&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;pre class=&quot;example&quot;&gt;
@@ -224,6 +224,309 @@ Java
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-org06b6f26&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;org06b6f26&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;6&lt;/span&gt; 排序算法&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-6&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org24d84cb&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org24d84cb&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.1&lt;/span&gt; 冒泡排序(BubbleSort)&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-6-1&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb4cf362&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgb4cf362&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.1.1&lt;/span&gt; 介绍(Introduction)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-1-1&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;en&lt;/b&gt;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+Bubblesort is a popular,but inefficient,sorting algorithm. It works by repeatedly swapping adjacent elements that are out of order.
+
+&lt;/pre&gt;
+&lt;p&gt;
+&lt;b&gt;cn&lt;/b&gt;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+冒泡排序是一种较简单的排序算法。它会遍历若干次要排序的数列，每次遍历时，它都会从前往后依次的比较相邻两个数的大小；如果前者比后者大，
+则交换它们的位置。这样，一次遍历之后，最大的元素就在数列的末尾！ 采用相同的方法再次遍历时，第二大的元素就被排列在最大元素之前。重复
+此操作，直到整个数列都有序为止！
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orge824951&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orge824951&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.1.2&lt;/span&gt; 伪代码(pseudo code)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-1-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 1: &lt;/span&gt;pseudo code&lt;/label&gt;&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;for i = 1 to A.length - 1
+    for j = A:length downto i + 1
+        if A[j] &amp;lt; A[j-1]   
+            exchange A[j] with A[j - 1]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgf9c0277&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgf9c0277&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.1.3&lt;/span&gt; 时间复杂度和稳定性&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-1-3&quot;&gt;
+&lt;pre class=&quot;example&quot;&gt;
+冒泡排序的时间复杂度是O(N2)。
+假设被排序的数列中有N个数。遍历一趟的时间复杂度是O(N)，需要遍历多少次呢？N-1次！因此，冒泡排序的时间复杂度是O(N2)。
+
+&lt;/pre&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+冒泡排序是稳定的算法，它满足稳定算法的定义。
+算法稳定性 -- 假设在数列中存在a[i]=a[j]，若在排序之前，a[i]在a[j]前面；并且排序之后，a[i]仍然在a[j]前面。则这个排序算法是稳定的！
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org1878d44&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org1878d44&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.1.4&lt;/span&gt; 实现(realization)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-1-4&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;C&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 2: &lt;/span&gt;C&lt;/label&gt;&lt;pre class=&quot;src src-C&quot;&gt;&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;,&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;;
+&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;flag&lt;/span&gt;; &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#26631;&amp;#35760;&lt;/span&gt;
+&lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt; (i=n-1; i&amp;gt;0; i--)
+{
+    flag = 0; &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#21021;&amp;#22987;&amp;#21270;&amp;#26631;&amp;#35760;&amp;#20026;0&lt;/span&gt;
+    &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#23558;a[0...i]&amp;#20013;&amp;#26368;&amp;#22823;&amp;#30340;&amp;#25968;&amp;#25454;&amp;#25918;&amp;#22312;&amp;#26411;&amp;#23614;&lt;/span&gt;
+    &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt; (j=0; j&amp;lt;i; j++)
+    {
+        &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (a[j] &amp;gt; a[j+1])
+        {
+            swap(a[j], a[j+1]);
+            flag = 1;    &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#33509;&amp;#21457;&amp;#29983;&amp;#20132;&amp;#25442;&amp;#65292;&amp;#21017;&amp;#35774;&amp;#26631;&amp;#35760;&amp;#20026;1&lt;/span&gt;
+        }
+    }
+    &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (flag==0)
+        &lt;span style=&quot;color: #a020f0;&quot;&gt;break&lt;/span&gt;;&lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#33509;&amp;#27809;&amp;#21457;&amp;#29983;&amp;#20132;&amp;#25442;&amp;#65292;&amp;#21017;&amp;#35828;&amp;#26126;&amp;#25968;&amp;#21015;&amp;#24050;&amp;#26377;&amp;#24207;&amp;#12290;&lt;/span&gt;
+} 
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;C#&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 3: &lt;/span&gt;C#&lt;/label&gt;&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;//Core code.
+for (int i = 0&lt;span style=&quot;color: #b22222;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;i &amp;lt; arrInt.Length - 1; i++)&lt;/span&gt;
+{
+    for (int j = 1&lt;span style=&quot;color: #b22222;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;j &amp;lt; arrInt.Length - i; j++)&lt;/span&gt;
+    {
+        if (arrInt[j] &amp;lt; arrInt[j - 1])
+        {
+            //&amp;#20132;&amp;#25442;&amp;#20540;
+            int temp = arrInt[j]&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
+            arrInt[j] = arrInt[j - 1]&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
+            arrInt[j - 1] = temp&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
+        }
+    }
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;Java&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 4: &lt;/span&gt;Java&lt;/label&gt;&lt;pre class=&quot;src src-java&quot;&gt;&lt;span style=&quot;color: #a020f0;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #a020f0;&quot;&gt;static&lt;/span&gt; &lt;span style=&quot;color: #228b22;&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000ff;&quot;&gt;BubbleSort&lt;/span&gt;(&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt;[] &lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;,&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;num&lt;/span&gt;) {
+    &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt; = 0; i &amp;lt; arr.&lt;span style=&quot;color: #228b22;&quot;&gt;length&lt;/span&gt;; i++) {
+            &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt; (&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt; = num-1; j &amp;gt;i; j--) {
+                    &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (arr[i]&amp;gt;arr[j]) {
+                            &lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;temp&lt;/span&gt;=arr[i];
+                            arr[i]=arr[j];
+                            arr[j]=temp;
+                    }
+            }
+    }
+    &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt;(&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;k&lt;/span&gt;=0;k&amp;lt;&lt;span style=&quot;color: #228b22;&quot;&gt;num&lt;/span&gt;;k++){
+            System.out.print(arr[k]+&lt;span style=&quot;color: #8b2252;&quot;&gt;&quot; &quot;&lt;/span&gt;);
+    }
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+&lt;b&gt;PHP&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 5: &lt;/span&gt;PHP&lt;/label&gt;&lt;pre class=&quot;src src-shell&quot;&gt;&lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt; &lt;span style=&quot;color: #0000ff;&quot;&gt;BubbleSort&lt;/span&gt;($&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;){
+        &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt;($&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;=0;$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;&amp;lt;count($&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;);$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;++){
+                &lt;span style=&quot;color: #a020f0;&quot;&gt;for&lt;/span&gt;($&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;=0;$&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;&amp;lt;$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;;$&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;++){
+                        &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt;($&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;]&amp;gt;$&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;]){
+                                $&lt;span style=&quot;color: #a0522d;&quot;&gt;temp&lt;/span&gt; = $&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;];
+                                $&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;] = $&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;];
+                                $&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[$&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;] = $&lt;span style=&quot;color: #a0522d;&quot;&gt;temp&lt;/span&gt;;
+                        }
+                }
+        }
+        foreach($&lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt; as $&lt;span style=&quot;color: #a0522d;&quot;&gt;value&lt;/span&gt;){
+                &lt;span style=&quot;color: #483d8b;&quot;&gt;echo&lt;/span&gt; $&lt;span style=&quot;color: #a0522d;&quot;&gt;value&lt;/span&gt;.&lt;span style=&quot;color: #8b2252;&quot;&gt;&quot; &quot;&lt;/span&gt;;
+        }
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org949d5ee&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org949d5ee&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.2&lt;/span&gt; 快速排序(QuickSort)&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-6-2&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8e3602d&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8e3602d&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.2.1&lt;/span&gt; 介绍(Introduction)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-2-1&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;cn&lt;/b&gt;
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+快速排序(Quick Sort)使用分治法策略。
+基本思想是：选择一个基准数，通过一趟排序将要排序的数据分割成独立的两部分；其中一部分的所有数据都比另外
+一部分的所有数据都要小。然后，再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此
+达到整个数据变成有序序列。
+
+&lt;/pre&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+快速排序流程：
+(1) 从数列中挑出一个基准值。
+(2) 将所有比基准值小的摆放在基准前面，所有比基准值大的摆在基准的后面(相同的数可以到任一边)；在这个分区退出之后，该基准就处于数列的中间位置。
+(3) 递归地把&quot;基准值前面的子数列&quot;和&quot;基准值后面的子数列&quot;进行排序。
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org5f0809a&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org5f0809a&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.2.2&lt;/span&gt; 伪代码(pseudo code)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org27b5084&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org27b5084&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.2.3&lt;/span&gt; 时间复杂度和稳定&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-2-3&quot;&gt;
+&lt;pre class=&quot;example&quot;&gt;
+快速排序的时间复杂度在最坏情况下是O(N2)，平均的时间复杂度是O(N*lgN)。 
+这句话很好理解：假设被排序的数列中有N个数。遍历一次的时间复杂度是O(N)，需要遍历多少次呢？至少lg(N+1)次，最多N次。
+(01) 为什么最少是lg(N+1)次？快速排序是采用的分治法进行遍历的，我们将它看作一棵二叉树，它需要遍历的次数就是二叉树的深度，而根据完全二叉树的定义，它的深度至少是lg(N+1)。因此，快速排序的遍历次数最少是lg(N+1)次。
+(02) 为什么最多是N次？这个应该非常简单，还是将快速排序看作一棵二叉树，它的深度最大是N。因此，快读排序的遍历次数最多是N次。
+
+&lt;/pre&gt;
+
+&lt;pre class=&quot;example&quot;&gt;
+快速排序是不稳定的算法，它不满足稳定算法的定义。
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org7ea73c7&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org7ea73c7&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.2.4&lt;/span&gt; 实现(realization)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-2-4&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;C&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-C&quot;&gt;&lt;span style=&quot;color: #8b2252;&quot;&gt;/**&lt;/span&gt;
+&lt;span style=&quot;color: #8b2252;&quot;&gt;* arr -- &amp;#24453;&amp;#25490;&amp;#24207;&amp;#30340;&amp;#25968;&amp;#32452;&lt;/span&gt;
+&lt;span style=&quot;color: #8b2252;&quot;&gt;* left -- &amp;#25968;&amp;#32452;&amp;#30340;&amp;#24038;&amp;#36793;&amp;#30028;&lt;/span&gt;
+&lt;span style=&quot;color: #8b2252;&quot;&gt;* right -- &amp;#25968;&amp;#32452;&amp;#30340;&amp;#21491;&amp;#36793;&amp;#30028;&lt;/span&gt;
+&lt;span style=&quot;color: #8b2252;&quot;&gt;*/&lt;/span&gt;
+&lt;span style=&quot;color: #228b22;&quot;&gt;void&lt;/span&gt; &lt;span style=&quot;color: #0000ff;&quot;&gt;quick_sort&lt;/span&gt;(&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;arr&lt;/span&gt;[],&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;left&lt;/span&gt;,&lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;right&lt;/span&gt;){
+    &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt;(left &amp;lt; right){
+            &lt;span style=&quot;color: #228b22;&quot;&gt;int&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;i&lt;/span&gt;,&lt;span style=&quot;color: #a0522d;&quot;&gt;j&lt;/span&gt;,&lt;span style=&quot;color: #a0522d;&quot;&gt;k&lt;/span&gt;;
+            i = left;
+            j = right;
+            k = arr[i];
+            &lt;span style=&quot;color: #a020f0;&quot;&gt;while&lt;/span&gt;(i &amp;lt; j){
+                    &lt;span style=&quot;color: #a020f0;&quot;&gt;while&lt;/span&gt;(i &amp;lt; j &amp;amp;&amp;amp; arr[j] &amp;gt; k){
+                            j--; &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#20174;&amp;#21491;&amp;#24448;&amp;#24038;&amp;#25214;&amp;#19968;&amp;#20010;&amp;#23567;&amp;#20110; k &amp;#30340;&amp;#25968;&lt;/span&gt;
+                    }
+                    &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt;(i &amp;lt; j){
+                            arr[i++] = arr[j];
+                    }
+                    &lt;span style=&quot;color: #a020f0;&quot;&gt;while&lt;/span&gt;(i&amp;lt;j &amp;amp;&amp;amp; arr[i] &amp;lt; k){
+                            i++; &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#20174;&amp;#24038;&amp;#24448;&amp;#21491;&amp;#25214;&amp;#31532;&amp;#19968;&amp;#20010;&amp;#22823;&amp;#20110; k &amp;#30340;&amp;#25968;&lt;/span&gt;
+                    }
+            }
+            arr[i] = k;
+            quick_sort(arr,left,i-1);
+            quick_sort(arr,i+1,right);
+    }
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;b&gt;Java&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-java&quot;&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;b&gt;PHP&lt;/b&gt;
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-shell&quot;&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org49943dd&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org49943dd&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.3&lt;/span&gt; 插入排序(InsertSort)&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-6-3&quot;&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org8bf591b&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org8bf591b&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.3.1&lt;/span&gt; 介绍(Instoduction)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orge8a4e93&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orge8a4e93&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.3.2&lt;/span&gt; 伪代码(pseudo code)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-3-2&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;for j=2 to A.length
+    key=A[j]&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
+    //Insert A[j] into the sorted sequence A[1..j-1]
+    i=j-1
+    while i&amp;gt;0 and A[i]&amp;gt;key
+         A[i+1]=A[i]
+         i=i-1
+    A[i+1]=key
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org3fd4247&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org3fd4247&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.3.3&lt;/span&gt; 实现(realization)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-3-3&quot;&gt;
+&lt;pre class=&quot;example&quot;&gt;
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org89bb30e&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;org89bb30e&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;6.3.4&lt;/span&gt; 分而治之(divideand-conquer)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-6-3-4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org49c9a4a&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org49c9a4a&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.4&lt;/span&gt; 选择排序&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orge1511ff&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orge1511ff&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.5&lt;/span&gt; 希尔排序&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgb022a04&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgb022a04&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.6&lt;/span&gt; 归并排序&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org03e530b&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org03e530b&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.7&lt;/span&gt; 基数排序&lt;/h3&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-org29deb5f&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org29deb5f&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;6.8&lt;/span&gt; 堆排序&lt;/h3&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-org5649dc7&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;org5649dc7&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;7&lt;/span&gt; 参考资料&lt;/h2&gt;
@@ -1193,8 +1496,8 @@ echo $data&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
 感谢您阅读此文，如果您发现任何错误，请发邮件至 zrg1390556487@gmail.com，谢谢！
 &lt;/p&gt;
 
-&lt;div id=&quot;outline-container-org83a0527&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org83a0527&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; Ajax 简单介绍&lt;/h2&gt;
+&lt;div id=&quot;outline-container-orge60be4d&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orge60be4d&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; AJAX 简介&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;
 &lt;pre class=&quot;example&quot;&gt;
 全称：Asynchronous Javascript and XML，由 Javascript+CSS+DOM+XMLHttpRequest+XSTL+XHTML+XML 七种技术组成，其中技术核心是 XMLHttpRequest。
@@ -1212,21 +1515,21 @@ echo $data&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-org9a8bcd8&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;org9a8bcd8&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; XMLHttpRequest 对象&lt;/h2&gt;
+&lt;div id=&quot;outline-container-org900aab2&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;org900aab2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; XMLHttpRequest&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 1: &lt;/span&gt;Ajax 原生代码示例&lt;/label&gt;&lt;pre class=&quot;src src-javascript&quot;&gt;&lt;span style=&quot;color: #a020f0;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;ajax&lt;/span&gt; = {
         &lt;span style=&quot;color: #0000ff;&quot;&gt;get&lt;/span&gt;:&lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt;(&lt;span style=&quot;color: #a0522d;&quot;&gt;url&lt;/span&gt;,&lt;span style=&quot;color: #a0522d;&quot;&gt;func&lt;/span&gt;){
-    &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;XMLHttpRequest&amp;#23545;&amp;#35937;&amp;#29992;&amp;#20110;&amp;#22312;&amp;#21518;&amp;#21488;&amp;#19982;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#20132;&amp;#25442;&amp;#25968;&amp;#25454;   &lt;/span&gt;
-    &lt;span style=&quot;color: #a020f0;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;xhr&lt;/span&gt; = &lt;span style=&quot;color: #a020f0;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #228b22;&quot;&gt;XMLHttpRequest&lt;/span&gt;();            
-    xhr.open(&lt;span style=&quot;color: #8b2252;&quot;&gt;'GET'&lt;/span&gt;, url, &lt;span style=&quot;color: #008b8b;&quot;&gt;true&lt;/span&gt;);
-    xhr.onreadystatechange = &lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt;() {
-      &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;readyState == 4&amp;#35828;&amp;#26126;&amp;#35831;&amp;#27714;&amp;#24050;&amp;#23436;&amp;#25104;&lt;/span&gt;
-      &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (xhr.readyState == 4 &amp;amp;&amp;amp; xhr.status == 200 || xhr.status == 304) { 
-        &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#20174;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#33719;&amp;#24471;&amp;#25968;&amp;#25454; &lt;/span&gt;
-        fn.call(&lt;span style=&quot;color: #008b8b;&quot;&gt;this&lt;/span&gt;, xhr.responseText);  
-      }
+        &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;XMLHttpRequest &amp;#29992;&amp;#20110;&amp;#22312;&amp;#21518;&amp;#21488;&amp;#19982;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#20132;&amp;#25442;&amp;#25968;&amp;#25454;   &lt;/span&gt;
+        &lt;span style=&quot;color: #a020f0;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;xhr&lt;/span&gt; = &lt;span style=&quot;color: #a020f0;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #228b22;&quot;&gt;XMLHttpRequest&lt;/span&gt;();
+        xhr.open(&lt;span style=&quot;color: #8b2252;&quot;&gt;'GET'&lt;/span&gt;, url, &lt;span style=&quot;color: #008b8b;&quot;&gt;true&lt;/span&gt;);
+        xhr.onreadystatechange = &lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt;() {
+        &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;readyState == 4 &amp;#35828;&amp;#26126;&amp;#35831;&amp;#27714;&amp;#24050;&amp;#23436;&amp;#25104;&lt;/span&gt;
+        &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (xhr.readyState == 4 &amp;amp;&amp;amp; xhr.status == 200 || xhr.status == 304) { 
+                &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#20174;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#33719;&amp;#24471;&amp;#25968;&amp;#25454;&lt;/span&gt;
+              fn.call(&lt;span style=&quot;color: #008b8b;&quot;&gt;this&lt;/span&gt;, xhr.responseText);  
+        }
     };
     xhr.send();
   },
@@ -1234,7 +1537,7 @@ echo $data&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
   &lt;span style=&quot;color: #0000ff;&quot;&gt;post&lt;/span&gt;: &lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt; (&lt;span style=&quot;color: #a0522d;&quot;&gt;url&lt;/span&gt;, &lt;span style=&quot;color: #a0522d;&quot;&gt;data&lt;/span&gt;, &lt;span style=&quot;color: #a0522d;&quot;&gt;fn&lt;/span&gt;) {
     &lt;span style=&quot;color: #a020f0;&quot;&gt;var&lt;/span&gt; &lt;span style=&quot;color: #a0522d;&quot;&gt;xhr&lt;/span&gt; = &lt;span style=&quot;color: #a020f0;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #228b22;&quot;&gt;XMLHttpRequest&lt;/span&gt;();
     xhr.open(&lt;span style=&quot;color: #8b2252;&quot;&gt;&quot;POST&quot;&lt;/span&gt;, url, &lt;span style=&quot;color: #008b8b;&quot;&gt;true&lt;/span&gt;);
-    &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#28155;&amp;#21152;http&amp;#22836;&amp;#65292;&amp;#21457;&amp;#36865;&amp;#20449;&amp;#24687;&amp;#33267;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#26102;&amp;#20869;&amp;#23481;&amp;#32534;&amp;#30721;&amp;#31867;&amp;#22411;&lt;/span&gt;
+    &lt;span style=&quot;color: #b22222;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color: #b22222;&quot;&gt;&amp;#28155;&amp;#21152; http &amp;#22836;&amp;#65292;&amp;#21457;&amp;#36865;&amp;#20449;&amp;#24687;&amp;#33267;&amp;#26381;&amp;#21153;&amp;#22120;&amp;#26102;&amp;#20869;&amp;#23481;&amp;#32534;&amp;#30721;&amp;#31867;&amp;#22411;&lt;/span&gt;
     xhr.setRequestHeader(&lt;span style=&quot;color: #8b2252;&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;, &lt;span style=&quot;color: #8b2252;&quot;&gt;&quot;application/x-www-form-urlencoded&quot;&lt;/span&gt;);  
     xhr.onreadystatechange = &lt;span style=&quot;color: #a020f0;&quot;&gt;function&lt;/span&gt;() {
       &lt;span style=&quot;color: #a020f0;&quot;&gt;if&lt;/span&gt; (xhr.readyState == 4 &amp;amp;&amp;amp; (xhr.status == 200 || xhr.status == 304)) {
@@ -1296,13 +1599,50 @@ echo $data&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&quot;outline-container-orge6b99d6&quot; class=&quot;outline-3&quot;&gt;
-&lt;h3 id=&quot;orge6b99d6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2&lt;/span&gt; 提交 Form 表单(包括文件上传)&lt;/h3&gt;
+&lt;div id=&quot;outline-container-org3fbdae6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;org3fbdae6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.2&lt;/span&gt; 常见的 POST 提交数据方式&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-2&quot;&gt;
+&lt;ol class=&quot;org-ol&quot;&gt;
+&lt;li&gt;&lt;p&gt;
+application/x-www-form-urlencoded
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+浏览器的原生 &amp;lt;form&amp;gt; 表单，如果不设置 enctype 属性，那么最终就会以 application/x-www-form-urlencoded 方式提交数据。
+
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+multipart/form-data
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+一般用来上传文件
+
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+application/json
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+该方案可以方便的提交复杂的数据结构，特别适合 RESTful 的接口。
+
+&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;
+text/xml
+&lt;/p&gt;
+&lt;pre class=&quot;example&quot;&gt;
+XML 结构传输。
+XML-RPC（XML Remote Procedure Call），它是一种使用 HTTP 作为传输协议，XML 作为编码方式的远程调用规范。它的使用也很
+广泛，如 WordPress 的 XML-RPC Api，搜索引擎的 ping 服务等等。
+
+&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orge6b99d6&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orge6b99d6&quot;&gt;&lt;span class=&quot;section-number-3&quot;&gt;3.3&lt;/span&gt; 提交 Form 表单(包括文件上传)&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-3-3&quot;&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-org700c795&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org700c795&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.2.1&lt;/span&gt; 常规方法&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-2-1&quot;&gt;
+&lt;h4 id=&quot;org700c795&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.3.1&lt;/span&gt; 常规方法&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-3-1&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 &lt;label class=&quot;org-src-name&quot;&gt;&lt;span class=&quot;listing-number&quot;&gt;Listing 3: &lt;/span&gt;一般是这样的&lt;/label&gt;&lt;pre class=&quot;src src-js&quot;&gt;$.ajax({
         url:&lt;span style=&quot;color: #8b2252;&quot;&gt;&quot;${pageContext.request.contextPath}/public/testupload&quot;&lt;/span&gt;,
@@ -1329,8 +1669,8 @@ echo $data&lt;span style=&quot;color: #b22222;&quot;&gt;;&lt;/span&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-org29756f7&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org29756f7&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.2.2&lt;/span&gt; 使用 FormData 对象&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-2-2&quot;&gt;
+&lt;h4 id=&quot;org29756f7&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.3.2&lt;/span&gt; 使用 FormData 对象&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-3-2&quot;&gt;
 &lt;p&gt;
 // 下面就介绍提高开发效率的方法
 &lt;/p&gt;
@@ -1364,8 +1704,8 @@ $.ajax({
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-org377090b&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;org377090b&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.2.3&lt;/span&gt; 使用 jQuery.form.js&lt;/h4&gt;
-&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-2-3&quot;&gt;
+&lt;h4 id=&quot;org377090b&quot;&gt;&lt;span class=&quot;section-number-4&quot;&gt;3.3.3&lt;/span&gt; 使用 jQuery.form.js&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-3-3-3&quot;&gt;
 &lt;pre class=&quot;example&quot;&gt;
 具体参考https://github.com/jquery-form/form
 
